@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SignVerify.Common.CoSignParameters" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Parameters\CoSignParameters.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CoSignType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SignVerify.Common.SignParameters">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAEAAAAAAAAAAAAABAAABAACAAAAAAAAAAIA=</HashCode>
+      <FileName>Parameters\SignParameters.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SignVerify.Common.VerifyParameters">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="AuthorizedCA" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAgAAAAAAAAAIE=</HashCode>
+      <FileName>Parameters\VerifyParameters.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SignVerify.Common.CoSignType">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Instrumentation\Common.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

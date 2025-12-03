@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="SignVerify.Common.IBaseCryptoProvider">
+    <Position X="0.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="SignVerify.Common.ICryptoProvider(Of R)">
+    <Position X="0.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
