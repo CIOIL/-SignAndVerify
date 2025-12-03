@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-8" ?> 
+<root>
+  <FriendlyName value="pkcs7" />
+  <AutoDestinationFolder value="false" />
+  <DestinationFolder value="C:\" />
+  <ProviderName value="PKCS7 crypto provider." />
+  <ShowOnlyNonRepudiation value="False" />
+  <SignAlgorithm value="RSA" />
+  <CheckTimeStamp value="False" />
+  <CheckCertificationPath value="TRUE" />
+  <CheckCRL value="TRUE" />
+  <DisplayTimeStamp value="FALSE" />
+</root>

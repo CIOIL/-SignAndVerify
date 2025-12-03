@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-8" ?> 
+<root>
+  <FriendlyName value="PDF" />
+  <TimeStampURL value="" />
+  <AutoDestinationFolder value="True" />
+  <DestinationFolder value="C:\" />
+  <ProviderName value="PDF crypto provider." />
+  <ShowOnlyNonRepudiation value="False" />
+  <SignAlgorithm value="RSA" />
+  <CheckTimeStamp value="False" />
+  <CheckCertificationPath value="TRUE" />
+  <CheckCRL value="TRUE" />
+  <SavingType value="Separate"/>
+<PDFContact value="Nissim"/>
+<PDFFieldName value="נחתם על ידי (שם משתמש)ע"/>
+<PDFIsVisible value="TRUE"/>
+<PDFImagePath value=""/>
+<PDFLocation value="ירושלים"/>
+<PDFPosition value="12"/>
+<PDFReason value="בדיקות"/>
+</root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-8" ?> 
+<root>
+  <FriendlyName value="Xades" />
+  <TimeStampURL value="" />
+  <AutoDestinationFolder value="True" />
+  <DestinationFolder value="C:\" />
+  <ProviderName value="Xades crypto provider." />
+  <ShowOnlyNonRepudiation value="False" />
+  <SignAlgorithm value="RSA" />
+  <CheckTimeStamp value="FALSE" />
+  <CheckCertificationPath value="TRUE" />
+  <CheckCRL value="TRUE" />
+  <DisplayTimeStamp value="FALSE" />
+</root>

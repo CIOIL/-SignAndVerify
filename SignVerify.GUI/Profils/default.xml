@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-8" ?> 
+<root>
+  <FriendlyName value="XmlDSig - default" />
+  <TimeStampURL value="" />
+  <AutoDestinationFolder value="True" />
+  <DestinationFolder value="C:\" />
+  <ProviderName value="XmlDigSig crypto provider." />
+  <ShowOnlyNonRepudiation value="False" />
+  <SignAlgorithm value="RSA" />
+  <CheckTimeStamp value="False" />
+  <CheckCertificationPath value="TRUE" />
+  <CheckCRL value="TRUE" />
+  <SavingType value="Separate"/>
+</root>
