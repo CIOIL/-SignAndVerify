@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D46139B5-6BDE-4319-AB4E-B6A609185605}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SignVerify.GUI.Main</StartupObject>
+    <RootNamespace>SignVerify.GUI</RootNamespace>
+    <AssemblyName>SignAndVerify</AssemblyName>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ApplicationIcon>icon_sign_files_32_32 copy.ico</ApplicationIcon>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>signVerify.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\Shared\SV3ClickOnce\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\nissimt\Shared\SV3ClickOnce\</InstallUrl>
+    <UpdateUrl>http://localhost/SignAndVerify/</UpdateUrl>
+    <SupportUrl>http://gov.il</SupportUrl>
+    <TargetCulture>he</TargetCulture>
+    <ProductName>Sign&amp;Verify</ProductName>
+    <PublisherName>GOV.IL</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SignVerify.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SignVerify.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E7FC5E27A8402F824C557B89FA3DB6B92D8B2318</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SignAndVerify_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\Dependancies\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependancies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Security.Cryptography">
+      <HintPath>..\Dependancies\Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\RoundedButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RoundedPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Messages\ChangeToPdf.Designer.vb">
+      <DependentUpon>ChangeToPdf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\ChangeToPdf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallFW.Designer.vb">
+      <DependentUpon>InstallFW.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InstallFW.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileExistDiag.Designer.vb">
+      <DependentUpon>FileExistDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileExistDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PdfAdvancedSettingsDiag.Designer.vb">
+      <DependentUpon>PdfAdvancedSettingsDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PdfAdvancedSettingsDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Files grid\FileList.Designer.vb">
+      <DependentUpon>FileList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Files grid\FileList.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Files grid\FileRow.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SignVerifyCL.Designer.vb">
+      <DependentUpon>SignVerifyCL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignVerifyCL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\signatureView.Designer.vb">
+      <DependentUpon>signatureView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\signatureView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CollapsePanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SignaturesTreeGrid.Designer.vb">
+      <DependentUpon>SignaturesTreeGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SignaturesTreeGrid.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmProgressBar.Designer.vb">
+      <DependentUpon>frmProgressBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgressBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallCSP.Designer.vb">
+      <DependentUpon>InstallCSP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InstallCSP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lang\ControlStrings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\ErrorMessages.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\InfoMessages.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InfoMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb" />
+    <Compile Include="Messages\ShowSignOptionDiag.Designer.vb">
+      <DependentUpon>ShowSignOptionDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\ShowSignOptionDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\NoCardDetailsMessageDiag.Designer.vb">
+      <DependentUpon>NoCardDetailsMessageDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\NoCardDetailsMessageDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\P_ErrorTemplate.Designer.vb">
+      <DependentUpon>P_ErrorTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\P_ErrorTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignVerify.Designer.vb">
+      <DependentUpon>SignVerify.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignVerify.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\testDisplaySignatures.Designer.vb">
+      <DependentUpon>testDisplaySignatures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test\testDisplaySignatures.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\testGlobalization.Designer.vb">
+      <DependentUpon>testGlobalization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test\testGlobalization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\Tmain.Designer.vb">
+      <DependentUpon>Tmain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test\Tmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test\Tprogress.Designer.vb">
+      <DependentUpon>Tprogress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test\Tprogress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\AlreadySignMessageDiag.Designer.vb">
+      <DependentUpon>AlreadySignMessageDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\AlreadySignMessageDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="SignaturesHistory.Designer.vb">
+      <DependentUpon>SignaturesHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignaturesHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="errorDiag.Designer.vb">
+      <DependentUpon>errorDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="errorDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\RepudiationMessageDiag.Designer.vb">
+      <DependentUpon>RepudiationMessageDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\RepudiationMessageDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignOptionsDiag.Designer.vb">
+      <DependentUpon>SignOptionsDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignOptionsDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="successDiag.Designer.vb">
+      <DependentUpon>successDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="successDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OptionsDiag.Designer.vb">
+      <DependentUpon>OptionsDiag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsDiag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages\ChangeToPdf.resx">
+      <DependentUpon>ChangeToPdf.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallFW.resx">
+      <DependentUpon>InstallFW.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileExistDiag.resx">
+      <DependentUpon>FileExistDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PdfAdvancedSettingsDiag.resx">
+      <DependentUpon>PdfAdvancedSettingsDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Files grid\FileRow.resx">
+      <DependentUpon>FileRow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignVerifyCL.resx">
+      <DependentUpon>SignVerifyCL.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CollapsePanel.resx">
+      <DependentUpon>CollapsePanel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\signatureView.resx">
+      <DependentUpon>signatureView.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SignaturesTreeGrid.resx">
+      <DependentUpon>SignaturesTreeGrid.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgressBar.resx">
+      <DependentUpon>frmProgressBar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallCSP.resx">
+      <DependentUpon>InstallCSP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\ControlStrings.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlStrings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\ErrorMessages.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\InfoMessages.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InfoMessages.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\ShowSignOptionDiag.resx">
+      <DependentUpon>ShowSignOptionDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\NoCardDetailsMessageDiag.resx">
+      <DependentUpon>NoCardDetailsMessageDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\P_ErrorTemplate.resx">
+      <DependentUpon>P_ErrorTemplate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignVerify.resx">
+      <DependentUpon>SignVerify.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\testDisplaySignatures.resx">
+      <DependentUpon>testDisplaySignatures.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\testGlobalization.en-US.resx">
+      <DependentUpon>testGlobalization.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\testGlobalization.he-IL.resx">
+      <DependentUpon>testGlobalization.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\testGlobalization.resx">
+      <DependentUpon>testGlobalization.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\Tmain.resx">
+      <DependentUpon>Tmain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test\Tprogress.resx">
+      <DependentUpon>Tprogress.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\AlreadySignMessageDiag.resx">
+      <DependentUpon>AlreadySignMessageDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignaturesHistory.resx">
+      <DependentUpon>SignaturesHistory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="errorDiag.resx">
+      <DependentUpon>errorDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\RepudiationMessageDiag.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RepudiationMessageDiag.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignOptionsDiag.resx">
+      <DependentUpon>SignOptionsDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="successDiag.resx">
+      <DependentUpon>successDiag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDiag.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsDiag.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\footer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\TopMenuBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\TopMenuBtn2Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\TopMenuBtn1Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\errorDiagHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\del-small.png" />
+    <Content Include="images\delete-big.jpg" />
+    <Content Include="images\delete-small.png" />
+    <None Include="images\govil.png" />
+    <None Include="images\letter.png" />
+    <Content Include="images\pdfExtrasmall.jpg" />
+    <Content Include="images\PDFSmall.png" />
+    <Content Include="images\Signature.jpg" />
+    <Content Include="Profils\PDF.xml" />
+    <Content Include="Profils\Xades-T.xml" />
+    <Content Include="Profils\default.xml" />
+    <None Include="Resources\PDF.png" />
+    <None Include="app.config" />
+    <Content Include="Help\SignVerifyUserGuide.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="images\certificate.png" />
+    <Content Include="icon_sign_files_32_32 copy.ico" />
+    <Content Include="images\BackMidMain.png" />
+    <Content Include="images\blueBack.png" />
+    <Content Include="images\BlueHeader.png" />
+    <Content Include="images\ButtomMain.png" />
+    <Content Include="images\customDiagContent.png" />
+    <Content Include="images\customDiagFooter.png" />
+    <Content Include="images\Dots.png" />
+    <Content Include="images\DottetLineMainPage.png" />
+    <None Include="images\minus.bmp" />
+    <None Include="images\plus.bmp" />
+    <Content Include="images\emark.png" />
+    <None Include="images\Error.png" />
+    <Content Include="images\gov_digitanSig_main_page_140408 copy.png" />
+    <Content Include="images\grayFooterBack.png" />
+    <Content Include="images\IconRights.png" />
+    <Content Include="images\icon_paper.ico" />
+    <Content Include="images\Minus.png" />
+    <Content Include="images\Plus.png" />
+    <Content Include="images\question.png" />
+    <Content Include="images\SignAndVerify.ico" />
+    <Content Include="images\SignAndVerifyFile.ico" />
+    <Content Include="images\SignatureOk.png" />
+    <Content Include="images\SignGreen.png" />
+    <Content Include="images\SignParallel.png" />
+    <Content Include="images\SignSerial.png" />
+    <Content Include="images\SignYellow.png" />
+    <Content Include="images\successDiagHeader.png" />
+    <Content Include="images\SuccessRed.png" />
+    <None Include="images\Symbol-Add.png" />
+    <None Include="images\Symbol-Remove.png" />
+    <Content Include="images\unknown.png" />
+    <Content Include="images\unknownSmall.png" />
+    <None Include="images\V 2.0.4\separator.png" />
+    <Content Include="images\V 2.0.4\SignBtn.png" />
+    <Content Include="images\V 2.0.4\verifyBtn.png" />
+    <Content Include="images\V 2.0.4\zipped.png" />
+    <Content Include="images\Vicon.png" />
+    <Content Include="images\ViIcon.png" />
+    <Content Include="images\ViIconSmall.png" />
+    <Content Include="images\X.png" />
+    <Content Include="images\XErroMessage copy.png" />
+    <Content Include="images\XErroMessagesmall.png" />
+    <Content Include="Profils\Xades.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Profils\pkcs7.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="images\SuccessDiag\HeaderBack.png" />
+    <None Include="images\SuccessDiag\dottedLine.png" />
+    <None Include="images\SuccessDiag\SuccesIcn.png" />
+    <None Include="images\SuccessDiag\BoderBack.png" />
+    <None Include="My Project\app.manifest" />
+    <None Include="SignAndVerify_TemporaryKey.pfx" />
+    <None Include="signVerify.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignVerify.Common\SignVerify.Common.vbproj">
+      <Project>{C694B6FC-61A6-475B-8E2C-450197E6D77B}</Project>
+      <Name>SignVerify.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SignVerify.GUI.Controls\Controls\SignVerify.GUI.Controls.csproj">
+      <Project>{F48C4C8C-F731-4C03-AA33-C860CDF2626E}</Project>
+      <Name>SignVerify.GUI.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SignVerify.MainComponent\SignVerify.MainComponent.vbproj">
+      <Project>{F6995B8F-1470-47B6-A7BD-CAE36AE7B546}</Project>
+      <Name>SignVerify.MainComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SignVerify.Profils\SignVerify.Profils.vbproj">
+      <Project>{7591064C-4A13-4283-861D-230612D0E5FC}</Project>
+      <Name>SignVerify.Profils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
